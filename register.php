@@ -43,14 +43,15 @@ if(Input::exists()){
                 $user->create(array(
                      'Email_address' => Input::get('Email_address'),
                      'Password' => Hash::make(Input::get('Password')),
-                    'Type' => '',
-                    'First_name' => '',
-                    'Last_name' => '',
+                    'Type' => 'CUSTOMER',
+                    'First_name' => Input::get('Password'),
+                    'Last_name' => Input::get('Password'),
                     'Address_no' => '',
                     'Address_street' => '',
                     'Address_city' => '',
-                    'credit_card_number' => 0,
-                    'Contact' => 0
+                    'Credit_card_number' => Input::get('Password'),
+                    'Contact' => Input::get('Password'),
+                    'Account_status' =>'PENDING'
                     //other data
                     ));
 
